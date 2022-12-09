@@ -1,16 +1,16 @@
 {% if product.metafields.item.relate != blank %}
   <div class="page-width"> 
-      <div class="grid"> 
+      <ul class="grid"> 
         {% for item in product.metafields.item.relate.value %}
-          <div style="flex: 1;">
+          <li class="grid__item">
             <a href="{{ item.url }}">
             <img src="{{ item.featured_image | img_url: 'large' }}" style="max-width: 100%;">
             </a>
             <h3>{{ item.title }}</h3>
             <p>{{ item.price_min | money }} ～</p>
-          </div>
+          </li>
         {%- endfor %}
-      </div>
+      </ul>
   </div>
 {% endif %}
 
