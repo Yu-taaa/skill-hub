@@ -1,14 +1,40 @@
-<h2>hello</h2>
+{% for item in collections.all.products limit: 3 %}
+  <h3>{{ item.title }}</h3>
+  {{ item.featured_image | img_url: width:200 | img_tag }}
+  {{ item.price_min | money }}
+{% else %}
+  <p>商品がありません</p>
+{%- endfor %}
 
+{% assign myshop = shop.name %}
+{% capture shopname %}
+  {% if myshop == "SKILLHUB" %}
+    <!-- ショップ名がSKILLHUBの時に実行したい処理 -->
+    <p>SKILLHUBのお店です</p>
+  {% elsif myshop != blank %}
+    <!-- それ以外のショップ名が登録されている時に実行したい処理 -->
+    <p>{{ myshop }}</p>
+  {% else %}
+    <!-- どの条件にも当てはまらない時に実行したい処理 -->
+    <p>ストア名は考え中です。</p>
+  {% endif %}
+{% endcapture %}
+{{shopname}}
 
 {% schema %}
   {
-    "name": "Section name",
-    "settings": [] ,
+    "name": "lesson2",
+    "settings":[] ,
     "presets": [
       {
-        "name": "lesson1"
+        "name": "lesson2"
       }
     ]
   }
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
