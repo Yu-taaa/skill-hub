@@ -1,5 +1,4 @@
 {% if product.metafields.item.relate != blank %}
-  <div class="page-width"> 
     {%- comment -%}
     <ul class="grid"> 
         {% for item in product.metafields.item.relate.value %}
@@ -37,7 +36,7 @@
       {%- endfor -%}
     </ul>
     </product-recommendations>
-  </div>
+  
 {% endif %}
 
 
