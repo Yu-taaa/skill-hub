@@ -27,7 +27,6 @@
   </h3>
 {%- endif -%}
 
-
 {%- for block in section.blocks -%}
   {% case block.type %}
     {%- when 'description' -%}
@@ -37,10 +36,12 @@
         </div>
       {%- endif -%}
     {%- when 'textblock' %}
+    {%- if block.settings.text != blank -%}    
       <div class="col2list" {{ block.shopify_attributes }}>
         <p class="col2list_heading">{{block.settings.heading}}</p>
         <div class="col2list_text">{{block.settings.text}}</div>
       </div>
+    {% endif %}
   {% endcase %}
 {% endfor %}
 {%- comment -%}

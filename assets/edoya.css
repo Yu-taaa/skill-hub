@@ -1,10 +1,13 @@
 .col2list{
   padding: 1.25rem 0;
   border-top: 1px #bbb solid;
+  font-size: 14px;
 }
 .col2list:last-child{
   border-bottom: 1px #bbb solid;
 }
+
+
 /* =============================================
 /  画面サイズ 750px以上 の場合
 /============================================ */
