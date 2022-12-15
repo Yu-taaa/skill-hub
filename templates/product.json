@@ -112,7 +112,7 @@
         "media_size": "large",
         "constrain_to_viewport": false,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -120,6 +120,57 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "8841c956-471d-428d-9093-d33e586eb700": {
+      "type": "main-product-custom",
+      "blocks": {
+        "6c45dc91-4e47-4ad2-bb45-3024d5e4871d": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "7f4cf887-791f-4239-ade2-93ca132f04bc": {
+          "type": "textblock",
+          "settings": {
+            "heading": "",
+            "text": "<p>{{ product.vendor }}<\/p>"
+          }
+        },
+        "0e105626-1a54-4bb1-a2a3-82c0ab9af3fb": {
+          "type": "textblock",
+          "settings": {
+            "heading": "",
+            "text": "<p>{{ product.metafields.custom[\"best-by-date\"].value }}<\/p>"
+          }
+        },
+        "b5174e81-1959-4467-828e-14dc814073fa": {
+          "type": "textblock",
+          "settings": {
+            "heading": "",
+            "text": "<p>{{ product.metafields.custom.allergen | metafield_tag }}<\/p>"
+          }
+        },
+        "c1c50740-8ba4-4339-a58f-8125f97dd3c0": {
+          "type": "textblock",
+          "settings": {
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "6c45dc91-4e47-4ad2-bb45-3024d5e4871d",
+        "7f4cf887-791f-4239-ade2-93ca132f04bc",
+        "0e105626-1a54-4bb1-a2a3-82c0ab9af3fb",
+        "b5174e81-1959-4467-828e-14dc814073fa",
+        "c1c50740-8ba4-4339-a58f-8125f97dd3c0"
+      ],
+      "settings": {
+        "title": "商品説明",
+        "heading_size": "h1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image-with-text": {
@@ -220,33 +271,12 @@
     "7924e183-28f1-494f-a692-802af10fd9a1": {
       "type": "lesson-metafield",
       "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
+    "8841c956-471d-428d-9093-d33e586eb700",
     "image-with-text",
     "multicolumn",
     "product-recommendations",
