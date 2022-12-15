@@ -3,7 +3,7 @@
     "banner": {
       "type": "main-collection-categorytop",
       "settings": {
-        "show_collection_description": true
+        "desc_position": "top"
       }
     },
     "product-grid": {
@@ -15,7 +15,9 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
