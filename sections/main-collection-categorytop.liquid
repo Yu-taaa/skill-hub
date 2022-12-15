@@ -1,0 +1,89 @@
+<div class="collection-categorytop">
+  <img src="{{ collection.image | img_url: 'master' }}">
+  <div class="collection-categorytop__inner page-width">
+    <h1>
+      {{ collection.title | escape }}
+    </h1>
+    {%- if section.settings.desc_position == 'top' -%}
+      {{ collection.description | strip_html | truncate: 170 }}
+    {%- endif -%}
+  </div>
+</div>
+<div class="page-width">
+  {%- if section.settings.desc_position == 'bottom' -%}
+    {{ collection.description }}
+  {%- endif -%}
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "トップセクション",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "説明文が長い時、文字以外を使用している場合は画像下がおすすめです。"
+      },
+      {
+        "type": "radio",
+        "id": "desc_position",
+        "label": "説明の表示位置",
+        "options": [
+          {
+            "value": "top",
+            "label": "画像と重ねる"
+          },
+          {
+            "value": "bottom",
+            "label": "画像下に表示"
+          },
+          {
+            "value": "none",
+            "label": "説明を表示しない"
+          }
+        ],
+        "default": "top"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+.collection-categorytop{
+  height: 35vh;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-categorytop img,
+.collection-categorytop__inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%); /*参考：https://www.webmagazine.kakisiti.co.jp/?p=407*/
+  width: 100%;
+  height: auto;
+}
+
+.collection-categorytop img{
+  height: 100%;
+  object-fit: cover;/*アスペクト比を維持したまま、要素のコンテンツボックス全体を埋めるように拡大縮小*/
+  z-index: 1;
+  opacity: 0.65;
+}
+
+.collection-categorytop__inner{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;  /*縦にブロック配置*/
+  align-items: center; /*縦のブロックを中央寄せ*/
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
