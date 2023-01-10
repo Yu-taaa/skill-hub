@@ -13,19 +13,19 @@
       "settings": {
         "products_per_page": 11,
         "image_ratio": "adapt",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "add_image_padding": false,
-        "show_image_outline": true,
+        "show_image_outline": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_filtering": true,
         "enable_sorting": true,
         "collapse_on_larger_devices": false,
-        "ranking": "triangle",
-        "color_num": "#fff",
+        "ranking": "square",
+        "color_num": "#ffffff",
         "color_badgebk1": "#cdab80",
-        "color_badgebk2": "#F3FFD8",
-        "color_badgebk3": "#DCC2FF",
+        "color_badgebk2": "#f3ffd8",
+        "color_badgebk3": "#dcc2ff",
         "color_badgebk4": "#dcdcdc"
       }
     }
