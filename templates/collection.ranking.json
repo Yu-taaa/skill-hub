@@ -21,7 +21,7 @@
         "enable_filtering": true,
         "enable_sorting": true,
         "collapse_on_larger_devices": false,
-        "ranking": "square",
+        "ranking": "triangle",
         "color_num": "#ffffff",
         "color_badgebk1": "#cdab80",
         "color_badgebk2": "#f3ffd8",
