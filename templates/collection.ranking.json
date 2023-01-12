@@ -21,11 +21,11 @@
         "enable_filtering": true,
         "enable_sorting": true,
         "collapse_on_larger_devices": false,
-        "ranking": "triangle",
+        "ranking": "square",
         "color_num": "#ffffff",
-        "color_badgebk1": "#cdab80",
-        "color_badgebk2": "#f3ffd8",
-        "color_badgebk3": "#dcc2ff",
+        "color_badgebk1": "#e2df04",
+        "color_badgebk2": "#adaeaa",
+        "color_badgebk3": "#d6873b",
         "color_badgebk4": "#dcdcdc"
       }
     }
