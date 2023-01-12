@@ -8,7 +8,6 @@
   .rank-badge {
     position: absolute;
     top: 0;
-    left: 1rem;  
   }
   
   .rank-badge.square {
@@ -29,6 +28,31 @@
     border-width: 50px 50px 0 0;
     border-color: #dcdcdc transparent transparent transparent;
   }
+
+  .rank-badge.square:nth-child(-n+3) {
+    color: #333;
+}
+
+.rank-badge.square:first-child{
+  background-color: #c90;
+}
+
+.rank-badge.square:nth-child(2){
+  background-color: #999;
+}
+
+.rank-badge.square:nth-child(3){
+  background-color: red;
+}
+
+.rank-badge.square:nth-child(4){
+  background-color: blue;
+}
+
+.rank-badge.square:nth-child(5){
+  background-color: yellow;
+}
+
   
   .rank-badge.triangle span {
     position: absolute;
@@ -95,6 +119,7 @@
             {% if collection.products_count == 4 %} grid--3-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--3-col-desktop grid--quarter-max{% endif %}
           {% endif %}">
           {%- for product in collection.products -%}
+          
             <li class="grid__item js-rank-grid" style="position: relative;">
               {% render 'card-product',
                 card_product: product,
