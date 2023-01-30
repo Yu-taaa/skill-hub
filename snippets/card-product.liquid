@@ -99,7 +99,21 @@
           </div>
         {%- endif -%}
         <div class="card__content">
-          <div class="card__information">
+          <div class="card__information product-card_box">
+            <div class="product-card__tags">
+              {% if card_product.metafields.custom._newitem == true %}
+                <span class="product-card__tag product-card__tag--new">新用品</span>
+              {% endif %}
+              {% if card_product.metafields.custom.web_only == true %}
+                <span class="product-card__tag">WEB限定</span>
+              {% endif %}
+              {% if card_product.metafields.custom._carrier_bag == true %}
+                <span class="product-card__tag">手提げ袋無料</span>
+              {% endif %}
+              {% if card_product.metafields.custom._refrigerated_delivery == true %}
+                <span class="product-card__tag">冷蔵配送</span>
+              {% endif %}
+            </div>
             <h3
               class="card__heading"
               {% if card_product.featured_media == null and settings.card_style == 'standard' %}
@@ -136,7 +150,21 @@
         </div>
       </div>
       <div class="card__content">
-        <div class="card__information">
+        <div class="card__information product-card_box">
+          <div class="product-card__tags">
+            {% if card_product.metafields.custom._newitem == true %}
+              <span class="product-card__tag product-card__tag--new">新商品</span>
+            {% endif %}
+            {% if card_product.metafields.custom.web_only == true %}
+              <span class="product-card__tag">WEB限定</span>
+            {% endif %}
+            {% if card_product.metafields.custom._carrier_bag == true %}
+              <span class="product-card__tag">手提げ袋無料</span>
+            {% endif %}
+            {% if card_product.metafields.custom._refrigerated_delivery == true %}
+              <span class="product-card__tag">冷蔵配送</span>
+            {% endif %}
+          </div>
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -153,6 +181,7 @@
             </a>
           </h3>
           <div class="card-information">
+            
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -347,16 +376,14 @@
       >
         <div class="card__content">
           <div class="card__information">
-            <h3 class="card__heading">
-              <a role="link" aria-disabled="true" class="full-unstyled-link">
-                {{ 'onboarding.product_title' | t }}
-              </a>
-            </h3>
+            
+            <h3 class="card__heading"><a role="link" aria-disabled="true" class="full-unstyled-link">{{ 'onboarding.product_title' | t }}</a></h3>    
           </div>
         </div>
       </div>
       <div class="card__content">
         <div class="card__information">
+          
           <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}
@@ -374,3 +401,36 @@
     </div>
   </div>
 {%- endif -%}
+
+
+
+
+
+<style>
+.product-card__tags {
+  left: 0;
+  position: relative;
+  top: 0;
+  line-height: 2;
+  margin-bottom: 0.5em;
+}
+
+.product-card__tags .product-card__tag {
+  white-space: nowrap;
+  margin-bottom: 1em;
+  padding: 5px 7px 4px;
+  border-radius: 6px;
+  letter-spacing: .05em;
+  font-size: 11px;
+  margin-right: 1px;
+  background: #ececec;
+  color: #3a3a3a;
+}
+
+.product-card_box{
+  position: relative;
+  display: block;
+}
+
+
+</style>
