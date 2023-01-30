@@ -67,7 +67,8 @@
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating,
               show_quick_add: section.settings.enable_quick_add,
-              section_id: section.id
+              section_id: section.id,
+              tag: section.settings.show_tag
             %}
           </li>
         {%- else -%}
@@ -167,6 +168,12 @@
         }
       ],
       "default": "body"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tag",
+      "label": "タグを表示する",
+      "default": true
     },
     {
       "type": "collection",

@@ -100,9 +100,10 @@
         {%- endif -%}
         <div class="card__content">
           <div class="card__information product-card_box">
+            {% if tag == true %}
             <div class="product-card__tags">
               {% if card_product.metafields.custom._newitem == true %}
-                <span class="product-card__tag product-card__tag--new">新用品</span>
+                <span class="product-card__tag product-card__tag--new">新商品</span>
               {% endif %}
               {% if card_product.metafields.custom.web_only == true %}
                 <span class="product-card__tag">WEB限定</span>
@@ -110,10 +111,17 @@
               {% if card_product.metafields.custom._carrier_bag == true %}
                 <span class="product-card__tag">手提げ袋無料</span>
               {% endif %}
+              {% if card_product.metafields.custom._free_noshi == true %}
+                <span class="product-card__tag">のし無料</span>
+              {% endif %}
+              {% if card_product.metafields.custom._normal_delivery == true %}
+                <span class="product-card__tag">常温配送</span>
+              {% endif %}
               {% if card_product.metafields.custom._refrigerated_delivery == true %}
                 <span class="product-card__tag">冷蔵配送</span>
               {% endif %}
             </div>
+          {% endif %}
             <h3
               class="card__heading"
               {% if card_product.featured_media == null and settings.card_style == 'standard' %}
@@ -151,20 +159,28 @@
       </div>
       <div class="card__content">
         <div class="card__information product-card_box">
-          <div class="product-card__tags">
-            {% if card_product.metafields.custom._newitem == true %}
-              <span class="product-card__tag product-card__tag--new">新商品</span>
-            {% endif %}
-            {% if card_product.metafields.custom.web_only == true %}
-              <span class="product-card__tag">WEB限定</span>
-            {% endif %}
-            {% if card_product.metafields.custom._carrier_bag == true %}
-              <span class="product-card__tag">手提げ袋無料</span>
-            {% endif %}
-            {% if card_product.metafields.custom._refrigerated_delivery == true %}
-              <span class="product-card__tag">冷蔵配送</span>
-            {% endif %}
-          </div>
+          {% if tag == true %}
+            <div class="product-card__tags">
+              {% if card_product.metafields.custom._newitem == true %}
+                <span class="product-card__tag product-card__tag--new">新商品</span>
+              {% endif %}
+              {% if card_product.metafields.custom.web_only == true %}
+                <span class="product-card__tag">WEB限定</span>
+              {% endif %}
+              {% if card_product.metafields.custom._carrier_bag == true %}
+                <span class="product-card__tag">手提げ袋無料</span>
+              {% endif %}
+              {% if card_product.metafields.custom._free_noshi == true %}
+                <span class="product-card__tag">のし無料</span>
+              {% endif %}
+              {% if card_product.metafields.custom._normal_delivery == true %}
+                <span class="product-card__tag">常温配送</span>
+              {% endif %}
+              {% if card_product.metafields.custom._refrigerated_delivery == true %}
+                <span class="product-card__tag">冷蔵配送</span>
+              {% endif %}
+            </div>
+          {% endif %}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
