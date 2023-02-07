@@ -118,6 +118,7 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
+        "enable_fixed_btn": false,
         "padding_top": 36,
         "padding_bottom": 12
       }
@@ -272,6 +273,23 @@
       "type": "lesson-metafield",
       "settings": {
       }
+    },
+    "167579803865b2c379": {
+      "type": "apps",
+      "blocks": {
+        "462a312d-4163-48a4-bf57-6bc394e0f4e0": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "462a312d-4163-48a4-bf57-6bc394e0f4e0"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -280,6 +298,7 @@
     "image-with-text",
     "multicolumn",
     "product-recommendations",
-    "7924e183-28f1-494f-a692-802af10fd9a1"
+    "7924e183-28f1-494f-a692-802af10fd9a1",
+    "167579803865b2c379"
   ]
 }
