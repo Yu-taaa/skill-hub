@@ -276,16 +276,26 @@
     },
     "167579803865b2c379": {
       "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "alireviews-section-1677581256173": {
+      "type": "apps",
       "blocks": {
-        "462a312d-4163-48a4-bf57-6bc394e0f4e0": {
-          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+        "alireviews-block-1677581256173": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
           "settings": {
-            "product": "{{product}}"
+            "name": "Review Box 1",
+            "vertical_alignment": "8",
+            "rating_color": "#1F1F1F",
+            "section_color": "#ffffff",
+            "primary_text_color": "#1F1F1F"
           }
         }
       },
       "block_order": [
-        "462a312d-4163-48a4-bf57-6bc394e0f4e0"
+        "alireviews-block-1677581256173"
       ],
       "settings": {
         "include_margins": true
@@ -299,6 +309,7 @@
     "multicolumn",
     "product-recommendations",
     "7924e183-28f1-494f-a692-802af10fd9a1",
-    "167579803865b2c379"
+    "167579803865b2c379",
+    "alireviews-section-1677581256173"
   ]
 }
